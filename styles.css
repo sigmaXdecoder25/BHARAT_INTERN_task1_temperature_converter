@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d6bda8b0;
+    color: #717171;
+    text-align: center;
+    transition: background-color 0.5s;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.theme-switcher {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.theme-switcher label {
+    margin-right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.theme-switcher input[type="checkbox"]:checked+label {
+    color: #c41e1e;
+}
+
+.theme-switcher input[type="checkbox"]+label::before {
+    content: '\f186';
+    font-family: FontAwesome;
+    font-size: 1.5rem;
+    color: #de2121;
+}
+
+.theme-switcher input[type="checkbox"]:checked+label::before {
+    content: '\f185';
+    color: #0bdca5;
+}
+
+.converter {
+    background-color: rgb(115 126 27 / 16%);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(0 211 84 / 60%);
+    transition: transform 0.3s ease;
+}
+
+.converter:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+button {
+    background-color: #2fd99f75;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #00ff8c;
+    transform: scale(1.05);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.input input[type="number"] {
+    padding: 10px;
+    width: 70%;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.input input[type="number"]:focus {
+    outline: none;
+    border-color: #00c6fb;
+    transition: border-color 0.3s ease;
+}
+
+.current-weather {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
